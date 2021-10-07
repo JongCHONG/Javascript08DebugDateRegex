@@ -127,3 +127,14 @@ function moments_whatDayIsToday() {
     console.log(day)
 }
 moments_whatDayIsToday()
+console.log("")
+
+//02 - Mois courant - Moments
+console.log("02 - Mois courant - Moments")
+
+function moments_whatMonthIsIt() {
+    var month = moment().format('MMMM')
+    console.log(month)
+}
+moments_whatMonthIsIt()
+console.log("")
