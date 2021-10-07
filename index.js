@@ -138,3 +138,15 @@ function moments_whatMonthIsIt() {
 }
 moments_whatMonthIsIt()
 console.log("")
+
+//03 - Format - Moments
+console.log("03 - Format - Moments")
+
+function formatDate(str) {
+
+    var Dateformat = moment(str).format('DD/MM/YYYY')
+    console.log(Dateformat)
+
+}
+formatDate("1985-09-18")
+console.log("")
