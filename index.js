@@ -89,10 +89,30 @@ console.log("")
 console.log("03 - Format \n")
 
 function formatDate(str) {
-    var Dateformat = new Date (str)
+    var Dateformat = new Date(str)
     console.log(Dateformat.toLocaleDateString())
     // var test = `${arrayDate[2]}/${arrayDate[1]}/${arrayDate[0]}`
     // console.log(test)
 }
 formatDate("1985-09-18")
+console.log("")
+
+//04 - Age
+console.log("04 - Age \n")
+
+function calculateAge(str) {
+    var birthday = new Date(str)
+    var yearBirthday = birthday.getFullYear()
+    var today = new Date()
+    var todayYear = today.getFullYear()
+    var age = todayYear - yearBirthday
+    var monthBirthday = birthday.getMonth()
+    var todayMonth = today.getMonth()
+    if (monthBirthday > todayMonth) {
+        console.log(age - 1)
+    } else {
+        console.log(age)
+    }
+}
+calculateAge("1985-09-18")
 console.log("")
