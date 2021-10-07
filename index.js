@@ -150,3 +150,21 @@ function formatDate(str) {
 }
 formatDate("1985-09-18")
 console.log("")
+
+//04 - Age - Moments
+console.log("04 - Age - Moments")
+
+function calculateAge(str) {
+
+    var yearBirthday = moment(str).format('YYYY')
+    var todayYear = moment().format('YYYY')
+    var age = todayYear - yearBirthday
+    var monthBirthday = moment(str).format('M')
+    var todayMonth = moment().format('M')
+    if (monthBirthday > todayMonth) {
+        console.log(age - 1)
+    } else {
+        console.log(age)
+    }
+}
+calculateAge("1985-09-18")
