@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 //01 - Aujourd'hui
 console.log("01 - Aujourd'hui \n")
 
@@ -116,3 +118,12 @@ function calculateAge(str) {
 }
 calculateAge("1985-09-18")
 console.log("")
+
+//01 - Aujourd'hui - Moments
+console.log("01 - Aujourd'hui - Moments")
+
+function moments_whatDayIsToday() {
+    var day = moment().format('dddd')
+    console.log(day)
+}
+moments_whatDayIsToday()
