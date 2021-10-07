@@ -89,13 +89,10 @@ console.log("")
 console.log("03 - Format \n")
 
 function formatDate(str) {
-    var arrayDate = str.split("-")
-    console.log(arrayDate[2])
-    var Dateformat = new Date (Number(arrayDate[2]), Number(arrayDate[1]), Number(arrayDate[0]))
+    var Dateformat = new Date (str)
     console.log(Dateformat.toLocaleDateString())
-
-
-    var test = `${arrayDate[2]}/${arrayDate[1]}/${arrayDate[0]}`
-    console.log(test)
+    // var test = `${arrayDate[2]}/${arrayDate[1]}/${arrayDate[0]}`
+    // console.log(test)
 }
 formatDate("1985-09-18")
+console.log("")
