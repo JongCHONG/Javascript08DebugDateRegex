@@ -116,14 +116,19 @@ function calculateAge(str) {
         console.log(age)
     }
 }
+
+var age = new Date(new Date() - new Date("1950-12-06")) //methode facile
+
 calculateAge("1985-09-18")
 console.log("")
+
+moment.locale("fr") //déclarer qu'on est en France.
 
 //01 - Aujourd'hui - Moments
 console.log("01 - Aujourd'hui - Moments")
 
 function moments_whatDayIsToday() {
-    var day = moment().format('dddd')
+    var day = moment().format("[Today on est] dddd")
     console.log(day)
 }
 moments_whatDayIsToday()
@@ -146,7 +151,7 @@ function formatDate(str) {
 
     var Dateformat = moment(str).format('DD/MM/YYYY')
     console.log(Dateformat)
-
+    console.log(moment(str).format("L"))
 }
 formatDate("1985-09-18")
 console.log("")
@@ -166,5 +171,8 @@ function calculateAge(str) {
     } else {
         console.log(age)
     }
+    //plus rapide
+    var birthday2 = moment().diff(moment(str), "years")
+    console.log(birthday2);
 }
 calculateAge("1985-09-18")
